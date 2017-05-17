@@ -1,0 +1,336 @@
+//colors
+$color_star_dust_approx: #a1a1a1;
+$color_gravel_approx: #4b4b4b;
+$color_bahama_blue_approx: #006291;
+$white: #ffffff;
+$black_30: rgba(0, 0, 0, 0.30);
+$black_10: rgba(0, 0, 0, 0.10);
+$silver: #c0c0c0;
+$black_20: rgba(0, 0, 0, 0.2);
+$color_la_palma_approx: #389b17;
+$color_celeste_approx: #d1d1d1;
+$color_masala_approx: #3c3c3c;
+$color_iron_approx: #d8d8d8;
+
+//fonts
+$font_0: Open Sans;
+$font_1: Helvetica Neue;
+$font_2: Helvetica;
+$font_3: Arial;
+$font_4: sans-serif;
+
+//@extend-elements
+//original selectors
+//h1, h2, h3, h4, h5, p, li
+%extend_1 {
+	font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+	font-weight: 400;
+	color: $color_gravel_approx;
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	background-color: $color_star_dust_approx;
+	color: $color_gravel_approx;
+	font-family: $font_0, $font_1, $font_2, $font_3, $font_4;
+	font-size: 13px;
+	font-weight: 400;
+	padding-bottom: 40px;
+	padding-top: 20px;
+}
+h1 {
+	@extend %extend_1;
+}
+h2 {
+	@extend %extend_1;
+}
+h3 {
+	@extend %extend_1;
+}
+h4 {
+	@extend %extend_1;
+}
+h5 {
+	@extend %extend_1;
+}
+p {
+	@extend %extend_1;
+}
+li {
+	@extend %extend_1;
+}
+i {
+	margin-right: 3px;
+}
+.container-fluid {
+	max-width: 860px;
+	margin: 0 auto;
+}
+.wrapper {
+	background-color: $white;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 6px $black_30, 0 0 40px $black_10 inset;
+	padding: 50px 40px 19px;
+	> .my-caption {
+		margin-bottom: 11px;
+	}
+}
+.my-info {
+	font-size: 13px;
+	font-weight: 400;
+	height: 20px;
+	display: block;
+	> span {
+		float: right;
+	}
+}
+.my-message {
+	font-size: 13px;
+	font-weight: 400;
+}
+.my-skill {
+	font-size: 13px;
+	font-weight: 400;
+	padding-top: 1px;
+	font-weight: 400;
+	> span {
+		float: right;
+		font-size: 10px;
+		font-weight: 400;
+		margin: 1px 0 0;
+		padding: 0;
+	}
+	+ .my-skill {
+		padding-bottom: -1px;
+	}
+}
+.my-specifics {
+	font-size: 13px;
+	font-weight: 400;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.my-venture {
+	font-size: 13px;
+	font-weight: 400;
+	> span {
+		font-size: 13px;
+		font-weight: 400;
+		float: right;
+	}
+}
+.contact {
+	margin: 0 0 65px 0;
+}
+.heading {
+	margin: 0 0 65px 0;
+}
+#portfolio {
+	margin: 0 0 65px 0;
+	margin-bottom: 40px;
+}
+.resume {
+	margin: 0 0 65px 0;
+}
+.my-picture {
+	background-color: $white;
+	border: 1px solid $silver;
+	border: 1px solid $black_20;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 3px $black_10;
+	float: left;
+	margin: 0 20px 5px 0;
+	padding: 4px;
+}
+.my-name {
+	color: $color_gravel_approx;
+	font-size: 24px;
+	line-height: 34px;
+	text-transform: uppercase;
+}
+.my-profession {
+	font-size: 16px;
+	line-height: 34px;
+	color: $color_la_palma_approx;
+}
+.my-services {
+	font-size: 16px;
+	line-height: 34px;
+	margin-top: 34px;
+	> a {
+		float: right;
+	}
+}
+.my-caption {
+	border-bottom: 1px dotted $color_la_palma_approx;
+	color: $color_la_palma_approx;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 15px;
+	text-transform: uppercase;
+	+ {
+		&.my-activity {
+			margin-top: 5px;
+		}
+		&.my-venture {
+			margin-top: 5px;
+		}
+		&.my-specifics {
+			margin-top: 5px;
+		}
+		&.my-skill {
+			margin-top: 5px;
+			margin-top: 4px;
+		}
+		&.my-info {
+			margin-top: 5px;
+		}
+	}
+}
+.my-activity {
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 4px;
+}
+.portfolio-item {
+	display: inline-block;
+	margin-bottom: 12px;
+	vertical-align: top;
+	width: 215px;
+	> img {
+		max-width: 100%;
+		margin-bottom: -1px;
+	}
+}
+.portfolio-details {
+	border: 1px solid $color_celeste_approx;
+	padding: 12px 12px 10px 12px;
+	> h4 {
+		color: $color_masala_approx;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: normal;
+		margin-bottom: 3px;
+		text-transform: uppercase;
+		+ img {
+			margin-top: 7px;
+			margin-bottom: 5px;
+		}
+	}
+	> p {
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 1.4;
+		margin-top: 5px;
+		+ img {
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+	}
+	a {
+		font-size: 13px;
+		font-weight: 400;
+	}
+	i {
+		font-size: 13px;
+		font-weight: normal;
+	}
+	> img + h4 {
+		margin-top: 10px;
+	}
+}
+.portfolio-links {
+	margin-top: 10px !important;
+}
+#my-location {
+	border: 1px solid $color_iron_approx;
+	height: 200px;
+	margin-bottom: 5px;
+	width: 100%;
+	img {
+		max-width: none;
+	}
+}
+@media(min-width: 768px) and(max-width: 979px) {
+	.wrapper {
+		padding: 50px 30px 19px;
+	}
+}
+@media(min-width: 768px) and(max-width: 768px) {
+	body {
+		padding: 0;
+	}
+	.wrapper {
+		padding: 50px 30px 19px;
+	}
+}
+@media(min-width: 569px) and(max-width: 767px) {
+	body {
+		padding: 0;
+	}
+	.wrapper {
+		padding: 40px 30px 0;
+	}
+	.contact {
+		margin: 0 0 25px 0;
+	}
+	.heading {
+		margin: 0 0 25px 0;
+	}
+	#portfolio {
+		margin: 0 0 25px 0;
+	}
+	.resume {
+		margin: 0 0 25px 0;
+	}
+}
+@media(min-width: 240px) and(max-width: 568px) {
+	body {
+		padding: 0;
+	}
+	.wrapper {
+		padding: 25px 20px 0;
+	}
+	.contact {
+		margin: 0 0 25px 0;
+	}
+	.heading {
+		margin: 0 0 25px 0;
+	}
+	#portfolio {
+		margin: 0 0 25px 0;
+	}
+	.resume {
+		margin: 0 0 25px 0;
+	}
+	.my-picture {
+		width: 70px;
+		margin: 0 10px 0 0;
+	}
+	.my-name {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.my-profession {
+		font-size: 14px;
+		line-height: 24px;
+	}
+	.my-services {
+		font-size: 14px;
+		line-height: 24px;
+		margin-top: 10px;
+	}
+	.my-message {
+		line-height: 16px;
+	}
+	.my-servicetext {
+		line-height: 16px;
+	}
+}
+a:hover {
+	color: $color_bahama_blue_approx;
+	text-decoration: none;
+}
